@@ -34,5 +34,16 @@ filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.write('Hello, *World!* :sunglasses:')
 
+df = pd.DataFrame(
+     np.random.randn(200, 3),
+     columns=['a', 'b', 'c'])
+
+c = alt.Chart(df).mark_circle().encode(
+     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
+st.write(c)
+
+
+
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
