@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-'''
+
 st.title('Uber pickups in NYC')
 
 DATE_COLUMN = 'date/time'
@@ -31,17 +31,9 @@ st.bar_chart(hist_values)
 # Some number in the range 0-23
 hour_to_filter = st.slider('hour', 0, 23, 17)
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
-'''
+
 st.write('Hello, *World!* :sunglasses:')
 
-df = pd.DataFrame(
-     np.random.randn(200, 3),
-     columns=['a', 'b', 'c'])
-
-c = alt.Chart(df).mark_circle().encode(
-     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
-
-st.write(c)
 
 
 
